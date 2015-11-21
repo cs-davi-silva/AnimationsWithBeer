@@ -1,20 +1,45 @@
 apply plugin: 'com.android.application'
 
+String PACKAGE = "br.com.davirodrigues.animationswithbeer"
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "br.com.davirodrigues.animationswithbeer"
+        applicationId PACKAGE
         minSdkVersion 19
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
+
+    productFlavors {
+        viewProrpetyAnimator {
+            applicationId PACKAGE + ".viewProrpetyAnimator"
+        }
+
+        animations {
+            applicationId PACKAGE + ".animations"
+        }
+
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        viewProrpetyAnimator {
+            java.srcDirs = ['src/viewProrpetyAnimator/java', 'src/viewProrpetyAnimator/java/']
+            assets.srcDirs = ['src/viewProrpetyAnimator/assets', 'src/viewProrpetyAnimator/assets/']
+        }
+        animations {
+            java.srcDirs = ['src/animations/java', 'src/animations/java/']
+            assets.srcDirs = ['src/animations/assets', 'src/animations/assets/']
+            res.srcDirs = ['src/animations/res', 'src/animations/res/']
         }
     }
 }
