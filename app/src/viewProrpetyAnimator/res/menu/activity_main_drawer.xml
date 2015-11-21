@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Rotation">
+        <menu>
+            <item
+                android:id="@+id/nav_rotation_x"
+                android:title=" - Rotation X" />
+            <item
+                android:id="@+id/nav_rotation_y"
+                android:title=" - Rotation Y" />
+            <item
+                android:id="@+id/nav_rotation_z"
+                android:title=" - Rotation Z" />
+        </menu>
+    </item>
+
+    <item android:title="Translation">
+        <menu>
+            <item
+                android:id="@+id/nav_translation_x"
+                android:title=" - Translation X" />
+            <item
+                android:id="@+id/nav_translation_y"
+                android:title=" - Translation Y" />
+            <item
+                android:id="@+id/nav_translation_z"
+                android:title=" - Translation Z" />
+        </menu>
+    </item>
+
+    <item android:title="Scale">
+        <menu>
+            <item
+                android:id="@+id/nav_scale_x"
+                android:title=" - Scale X" />
+            <item
+                android:id="@+id/nav_scale_y"
+                android:title=" - Scale Y" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_alpha"
+        android:title=" - To alpha 0" />
+
+    <item android:title="Combining">
+        <menu>
+            <item
+                android:id="@+id/nav_combine_1"
+                android:title=" - Combining 1" />
+            <item
+                android:id="@+id/nav_combine_2"
+                android:title=" - Combining 2" />
+            <item
+                android:id="@+id/nav_combine_3"
+                android:title=" - Combining 3" />
+        </menu>
+    </item>
+
+</menu>
