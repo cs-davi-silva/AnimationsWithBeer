@@ -6,5 +6,6 @@
 
     <color name="color_primary">#7a68ae</color>
     <color name="color_primary_dark">#605389</color>
+    <color name="white">#fff</color>
 
 </resources>
