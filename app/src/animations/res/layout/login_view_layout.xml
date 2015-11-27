@@ -27,7 +27,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="-50dp"
         android:hint="Name"
-        android:visibility="gone" />1
+        android:visibility="gone" />
 
     <EditText
         android:id="@+id/phone_number"
