@@ -41,17 +41,17 @@ public class LoginView extends FrameLayout {
     private void initializeLayout() {
         mView = inflate(getContext(), R.layout.login_view_layout, this);
 
-        rootForm = (FrameLayout) mView.findViewById(R.id.root_form);
+        rootForm = mView.findViewById(R.id.root_form);
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
             rootForm.setTranslationZ(20);
         }
-        buttonsPanel = (LinearLayout) mView.findViewById(R.id.buttons_panel);
-        mEmail = (TextView) mView.findViewById(R.id.email);
-        mName = (TextView) mView.findViewById(R.id.name);
-        mPhoneNumer = (TextView) mView.findViewById(R.id.phone_number);
-        mPassword = (TextView) mView.findViewById(R.id.password);
-        mEnter = (Button) mView.findViewById(R.id.enter);
-        mLoginOrRegister = (Button) mView.findViewById(R.id.register_login);
+        buttonsPanel = mView.findViewById(R.id.buttons_panel);
+        mEmail = mView.findViewById(R.id.email);
+        mName = mView.findViewById(R.id.name);
+        mPhoneNumer = mView.findViewById(R.id.phone_number);
+        mPassword = mView.findViewById(R.id.password);
+        mEnter = mView.findViewById(R.id.enter);
+        mLoginOrRegister = mView.findViewById(R.id.register_login);
 
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
             rootForm.setTranslationZ(20);
@@ -81,7 +81,6 @@ public class LoginView extends FrameLayout {
     }
 
     public void clickEnter(@NonNull View v) {
-
         Snackbar.make(this, "Enter", Snackbar.LENGTH_LONG).show();
     }
 
@@ -98,7 +97,7 @@ public class LoginView extends FrameLayout {
 
     public void openRegisterAnimation() {
         rootForm.animate().scaleY(1.5f).start();
-        mEmail.animate().translationY(-90).start();
+        mEmail.animate().translationY(-140).start();
         mName.animate().setListener(new AnimatorWithBeerListener() {
             @Override
             public void onAnimationStart(Animator animation) {
@@ -125,8 +124,8 @@ public class LoginView extends FrameLayout {
             }
         }).alpha(1);
 
-        mPassword.animate().translationY(90).start();
-        buttonsPanel.animate().translationY(90).start();
+        mPassword.animate().translationY(140).start();
+        buttonsPanel.animate().translationY(140).start();
     }
 
     public void closeRegisterAnimation() {
